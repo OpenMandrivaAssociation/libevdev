@@ -3,8 +3,8 @@
 %define develname %mklibname -d evdev
 
 Name:		libevdev
-Version:	1.2.1
-Release:	3
+Version:	1.3
+Release:	1
 Summary:	Kernel Evdev Device Wrapper Library
 Group:		System/Libraries
 License:	MIT
@@ -40,10 +40,11 @@ Kernel Evdev Device Wrapper Library Development Package.
 
 %build
 autoreconf --force -v --install || exit 1
-%configure2_5x \
+%configure \
 	--disable-static \
 	--disable-silent-rules \
 	--disable-gcov
+
 %make
 
 %install
