@@ -3,7 +3,7 @@
 %define develname %mklibname -d evdev
 
 Name:		libevdev
-Version:	1.3.1
+Version:	1.3.2
 Release:	1
 Summary:	Kernel Evdev Device Wrapper Library
 Group:		System/Libraries
@@ -40,6 +40,7 @@ Kernel Evdev Device Wrapper Library Development Package.
 
 %build
 autoreconf --force -v --install || exit 1
+CFLAGS="%{optflags} -Wno-error" \
 %configure \
 	--disable-static \
 	--disable-silent-rules \
@@ -54,6 +55,7 @@ autoreconf --force -v --install || exit 1
 find %{buildroot} -name "*.la" -delete
 
 %files -n evdev-utils
+%{_bindir}/mouse-dpi-tool
 %{_bindir}/touchpad-edge-detector
 
 %files -n %{lib_name}
