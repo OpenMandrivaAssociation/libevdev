@@ -4,7 +4,7 @@
 
 Name:		libevdev
 Version:	1.3.2
-Release:	1
+Release:	2
 Summary:	Kernel Evdev Device Wrapper Library
 Group:		System/Libraries
 License:	MIT
