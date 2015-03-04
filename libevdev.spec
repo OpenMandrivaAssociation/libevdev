@@ -55,6 +55,7 @@ CFLAGS="%{optflags} -Wno-error" \
 find %{buildroot} -name "*.la" -delete
 
 %files -n evdev-utils
+%{_bindir}/libevdev-tweak-device
 %{_bindir}/mouse-dpi-tool
 %{_bindir}/touchpad-edge-detector
 
