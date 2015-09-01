@@ -3,8 +3,8 @@
 %define develname %mklibname -d evdev
 
 Name:		libevdev
-Version:	1.4.3
-Release:	3
+Version:	1.4.4
+Release:	1
 Summary:	Kernel Evdev Device Wrapper Library
 Group:		System/Libraries
 License:	MIT
