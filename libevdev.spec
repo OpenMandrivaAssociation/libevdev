@@ -3,7 +3,7 @@
 %define develname %mklibname -d evdev
 
 Name:		libevdev
-Version:	1.5.6
+Version:	1.5.7
 Release:	1
 Summary:	Kernel Evdev Device Wrapper Library
 Group:		System/Libraries
@@ -27,12 +27,12 @@ Group:		System/Libraries
 %{name} is a library to wrap kernel evdev devices and provide a proper API
 to interact with those devices.
 
-%package -n %develname
+%package -n %{develname}
 Summary:	Kernel Evdev Device Wrapper Library Development Package
 Provides:	%{name}-devel = %{version}-%{release}
 Requires:	%{lib_name} = %{version}-%{release}
 
-%description -n %develname
+%description -n %{develname}
 Kernel Evdev Device Wrapper Library Development Package.
 
 %prep
