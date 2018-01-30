@@ -3,7 +3,7 @@
 %define develname %mklibname -d evdev
 
 Name:		libevdev
-Version:	1.5.7
+Version:	1.5.8
 Release:	1
 Summary:	Kernel Evdev Device Wrapper Library
 Group:		System/Libraries
@@ -16,8 +16,12 @@ Source0:	http://www.freedesktop.org/software/%{name}/%{name}-%{version}.tar.xz
 to interact with those devices.
 
 %package -n evdev-utils
-Summary:	Kernel Evdev Device Wrapper Library
+Summary:	Utilities for %{name}
 Group:		System/Base
+
+%description -n evdev-utils
+%{name} is a library to wrap kernel evdev devices and provide a proper API
+to interact with those devices.
 
 %package -n %{lib_name}
 Summary:	Kernel Evdev Device Wrapper Library
