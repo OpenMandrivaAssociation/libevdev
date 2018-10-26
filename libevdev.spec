@@ -3,7 +3,7 @@
 %define develname %mklibname -d evdev
 
 Name:		libevdev
-Version:	1.5.9
+Version:	1.6.0
 Release:	1
 Summary:	Kernel Evdev Device Wrapper Library
 Group:		System/Libraries
@@ -40,7 +40,7 @@ Requires:	%{lib_name} = %{version}-%{release}
 Kernel Evdev Device Wrapper Library Development Package.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 autoreconf --force -v --install || exit 1
@@ -50,10 +50,10 @@ CFLAGS="%{optflags} -Wno-error" \
 	--disable-silent-rules \
 	--disable-gcov
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 # We intentionally don't ship *.la files
 find %{buildroot} -name "*.la" -delete
