@@ -4,7 +4,7 @@
 
 Name:		libevdev
 Version:	1.6.0
-Release:	2
+Release:	1
 Summary:	Kernel Evdev Device Wrapper Library
 Group:		System/Libraries
 License:	MIT
@@ -40,7 +40,7 @@ Requires:	%{lib_name} = %{version}-%{release}
 Kernel Evdev Device Wrapper Library Development Package.
 
 %prep
-%autosetup -p1
+%setup -q
 
 %build
 autoreconf --force -v --install || exit 1
@@ -50,10 +50,10 @@ CFLAGS="%{optflags} -Wno-error" \
 	--disable-silent-rules \
 	--disable-gcov
 
-%make_build
+%make
 
 %install
-%make_install
+%makeinstall_std
 
 # We intentionally don't ship *.la files
 find %{buildroot} -name "*.la" -delete
