@@ -4,12 +4,13 @@
 
 Name:		libevdev
 Version:	1.9.1
-Release:	1
+Release:	2
 Summary:	Kernel Evdev Device Wrapper Library
 Group:		System/Libraries
 License:	MIT
 URL:		http://www.freedesktop.org/wiki/Software/libevdev
 Source0:	http://www.freedesktop.org/software/%{name}/%{name}-%{version}.tar.xz
+BuildRequires:	meson
 
 %description
 %{name} is a library to wrap kernel evdev devices and provide a proper API
@@ -43,17 +44,11 @@ Kernel Evdev Device Wrapper Library Development Package.
 %autosetup -p1
 
 %build
-autoreconf --force -v --install || exit 1
-CFLAGS="%{optflags} -Wno-error" \
-%configure \
-	--disable-static \
-	--disable-silent-rules \
-	--disable-gcov
-
-%make_build
+%meson -Dtests=disabled -Ddocumentation=disabled -Dcoverity=false
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 # We intentionally don't ship *.la files
 find %{buildroot} -name "*.la" -delete
