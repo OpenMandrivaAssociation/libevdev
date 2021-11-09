@@ -3,7 +3,7 @@
 %define develname %mklibname -d evdev
 
 Name:		libevdev
-Version:	1.11.0
+Version:	1.12.0
 Release:	1
 Summary:	Kernel Evdev Device Wrapper Library
 Group:		System/Libraries
@@ -66,5 +66,5 @@ find %{buildroot} -name "*.la" -delete
 %{_includedir}/libevdev-1.0/
 %{_libdir}/libevdev.so
 %{_libdir}/pkgconfig/libevdev.pc
-%{_mandir}/man3/libevdev.3.*
-%{_mandir}/man1/*.1.*
+%doc %{_mandir}/man3/libevdev.3.*
+%doc %{_mandir}/man1/*.1.*
