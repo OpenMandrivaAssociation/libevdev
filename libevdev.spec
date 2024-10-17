@@ -8,7 +8,7 @@ Release:	1
 Summary:	Kernel Evdev Device Wrapper Library
 Group:		System/Libraries
 License:	MIT
-URL:		http://www.freedesktop.org/wiki/Software/libevdev
+URL:		https://www.freedesktop.org/wiki/Software/libevdev
 Source0:	http://www.freedesktop.org/software/%{name}/%{name}-%{version}.tar.xz
 BuildRequires:	meson
 
